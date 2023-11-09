@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Analizowanie danych JSON</title>
+        <script>
+            function jsonParse() {
+                var intString = prompt("Wprowadź obiekt JSON");
+                var out = "";
+                myObject = JSON.parse(intString);
+                for (i in myObject) {
+                    out += "Właściwość: " + i + " = " + myObject[i] + '\n';
+                }
+                alert(out)
+            }
+        </script>
+    </head>
+    <body onload="jsonParse()"
+</html>

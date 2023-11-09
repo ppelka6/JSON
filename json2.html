@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Opis formatu JSON </title>
+        <script>
+            var booklistObject = {
+                "booklist" : [{"title":"Dziady", "author":"Adam Mickiewicz"}, {"title":"Potop", "author":"Henryk Sienkiewicz"}, {"title":"Pan Tadeusz", "author":"Adam Mickiewicz"},
+                 {"title":"2001:Odyseja Kosmiczna", "author":"Arthur C. Clarke"}, {"title":"Obcy w obcym kraju", "author":"Robert A.Heinlein"}]
+            }
+
+            //zmienna przechowująca komunikat dla użytkownika
+            var out = "";
+
+            //uzyskiwanie tablicy
+            var books = booklistObject.booklist;
+
+            //wykonywanie pętli dla elementów tablicy i pobieranie kolejnych książek
+            for(var i=0; i<books.length;i++) {
+                var booknumber = i+1;
+                out += "Książka " + booknumber + "to: '" + books[i].title + "' Autor: " + books[i].author + "\n";
+            }
+        </script>
+    </head>
+    <body onload="alert(out)">
+
+    </body>
+</html>
